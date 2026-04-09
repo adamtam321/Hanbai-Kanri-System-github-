@@ -1,0 +1,39 @@
+# Build
+build/
+target/
+out/
+
+# Java
+*.class
+*.jar
+
+# IDE
+.settings/
+.idea/
+*.iml
+.classpath
+.project
+
+# Env
+.env
+.env.*
+
+# DB / Data
+DB/
+*.csv
+*.sql
+
+# Logs
+logs/
+*.log
+
+# OS
+.DS_Store
+
+# Img
+*.png
+*.jpg
+*.gif
+
+
+*.mp3

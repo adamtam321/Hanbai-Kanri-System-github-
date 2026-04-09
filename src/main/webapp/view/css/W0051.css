@@ -1,0 +1,269 @@
+@charset "UTF-8";
+
+span.table{											/*（書式、文字サイズ、上下中央揃え） */
+	font-family: 'FontAwesome', sans-serif;
+	font-size: x-large;
+	/*valign:middle;*/
+	text-align: center;
+}
+
+span.table2{										/*  （書式、文字サイズ、中央揃え） */
+	font-size: medium;
+	text-align: center;
+	/*valign:middle;*/
+}
+
+div.button-panel{									/* （書式、文字サイズ、太字、右揃え、配置右寄せ）*/
+	font-size: large;
+	font-weight: bold;
+	text-align:right;
+	float:right;
+}
+
+div.button1{										/* （書式、左揃え、配置左寄せ、左寄せ解除） */
+	text-align:left;
+	float:left;
+	clear:left;
+}
+
+div.button2{										/* （書式、左揃え、配置左寄せ、左寄せ解除） */
+	text-align:left;
+	float:left;
+	clear:left;
+}
+
+div.end{											/* （書式、中央揃え、直上のテキストから70px改行、配置左右寄せ解除） */
+	text-align:center;
+	position:relative;
+	top:70px;
+	clear:both;
+}
+
+div.center{											/* （書式、中央揃え、全ページの上下の間隔）  */
+	text-align:center;
+	line-height: 200%;
+	
+	/*フッターの位置調整のため追加*/
+	flex: 1;
+}
+
+div.select{											/*  （書式、中央揃え、文字サイズ）*/
+	text-align:center;
+	margin: 0 auto;
+	width: 90%;
+}
+
+div.font{											/*  （文字色、文字サイズ） */
+	color:red;
+ 	font-size: xx-large;
+}
+
+div.footer1{										/* （ 直上のテキストから20pxスペース）*/
+	position: relative;
+	top: 20px;
+}
+
+div.footer2{										/*  （ 文字サイズ、直上のテキストから35pxスペース） */
+	font-size: medium;
+	position: relative;
+	top:35px;
+}
+
+div.footer3{										/* （書式、中央揃え、文字サイズ、直上のテキストから15pxスペース、配置左右寄せ解除） */
+	text-align: center;
+	font-size: 18px;
+	position: relative;
+	top: 15px;
+	clear:both;
+}
+
+body {												/* 前ページに適用（背景色、文字書式、背景固定） */
+	/*ヘッダー, フッターのため追加　ここから*/
+	margin: 0;
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+	/*ここまで*/
+	font-family: 'FontAwesome', sans-serif;
+ 	font: 400 87.5%/1.5em 'Open Sans', sans-serif;
+	background: linear-gradient(-45deg, rgba(127, 255, 212, .8), rgba(255, 250, 250, .8),rgba(0, 255, 0, .8));
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: right bottom;
+}
+
+h1 {												/*  （配置、文字サイズ） */
+	padding: 1em 0;
+    font-size: 40px;
+	margin-top: 1em;   
+	margin-bottom: 0.3em;
+}
+
+h1.regist {												/*  （配置、文字サイズ） */
+	padding: 0em 0;
+    font-size: 40px;
+	margin-top: 2em;   
+	margin-bottom: 1.3em;
+}
+
+/* 8月　応急処置のサブヘッダー。タイトル下の太字に使用しています。 */
+.subh{
+	font-size: 16px;
+}
+
+/* 8月　ボタンの文字サイズ変更 */
+input{
+	font-size: 16px;
+}
+
+/* 8月　プルダウンメニューの文字サイズ変更 */
+select{
+	font-size: 18px;
+}
+
+/* 8月　商品画像のCSS。getItem.jspで使用。
+	配置を%指定することで、ウィンドウサイズの変更におけるスタイルの崩壊を防ぐ */
+.relative{
+	position: relative;
+	width: 100%;
+	margin: 0 auto;
+}
+
+/* 8月　POP画像のCSS。getItem.jspで使用。
+	配置を%指定することで、ウィンドウサイズの変更におけるスタイルの崩壊を防ぐ */
+.absolute{
+	position: absolute;
+	left: 53%;
+	top: 53%;
+}
+
+/*headerのcss*/
+.header{
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	background-color: rgba(0, 212, 170, 8);
+	padding: 15px 0px 8px;
+	z-index: 100;
+	display: flex;
+	justify-content: space-between
+}
+
+.sub_header1{
+	text-align: right;
+	padding: 0px 20px; /*画面端からの余白*/
+}
+
+.sub_header2{
+	display: inline-block;
+}
+
+.sub_header3{
+	padding: 0px 20px;
+	display: inline-flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+/*フッター（コピーライト表示）用*/
+.footer {
+	background-color: rgb(245, 245, 245);
+	text-align:center;
+	position: relative;
+	padding: 1rem;
+}
+
+/*.relativeview{
+	
+}*/
+
+/*.absoluteview{
+	potision: absolute;
+}*/
+
+/*商品データ一覧画像のステータス表示位置*/
+.img-wrap {
+    position: relative;
+    display: inline-block;
+}
+
+.status-badge {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 60px;
+}
+
+/* 2026年3月　商品一覧画面に並び替え機能（価格順）を追加  */
+/* 2026年3月　並び替え機能追加：並び替えボタン表示エリア */
+.sort-section{
+width:200px;
+position:relative;
+margin:0 5% 5px auto;  
+text-align:center;
+}
+
+/* 2026年3月　並び替えメニュー開閉用ヘッダー */
+#sortHeader{
+cursor:pointer;
+padding:8px 12px;
+background:#f0f0f0;
+border:1px solid #ccc;
+border-radius:6px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+font-weight:bold;
+}
+
+/* 2026年3月　並び替えオプション（ドロップダウンメニュー） */
+#sortOptions{
+display:none;
+position:absolute;
+right:0;
+top:100%;
+background:#fff;
+border:1px solid #ccc;
+border-radius:6px;
+margin-top:5px;
+width:100%;
+z-index:1000;
+}
+
+/* 2026年3月　並び替え選択ボタン */
+#sortOptions button{
+width:100%;
+padding:8px;
+border:none;
+background:none;
+cursor:pointer;
+text-align:left;
+}
+
+/* 2026年3月コンテナの枠 */
+.waku-container{
+width:90%;
+margin:0 auto;
+}
+/* 2026年3月 iframeのスタイル */
+.waku-container iframe{
+width:100%;
+height:500px;
+display:block;
+}
+
+
+/* 2026年3月タイトルを大きく表示 */
+.title-text {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* 2026年3月説明文を小さく表示、行間を詰める */
+.desc-text {
+    font-size: 16px;
+    line-height: 1.2;
+    margin: 0;
+    display: block;
+}

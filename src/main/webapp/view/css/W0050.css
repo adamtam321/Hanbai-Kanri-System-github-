@@ -1,0 +1,18 @@
+span.sample {font-size: x-large; }
+
+body {
+	font-family: 'FontAwesome', sans-serif;
+ 	font: 400 87.5%/1.5em 'Open Sans', sans-serif;
+ 	background: radial-gradient(#90EE90,#FFFAFA,#7FFFD4);
+}
+
+h1 {
+	text-align: center;
+	padding: 1em 0;
+    font-size: 50px;
+}
+
+p1{
+	text-align:center;
+	margin:auto
+}
