@@ -19,9 +19,7 @@ out/
 .env.*
 
 # DB / Data
-DB/
 *.csv
-*.sql
 
 # Logs
 logs/
@@ -29,11 +27,3 @@ logs/
 
 # OS
 .DS_Store
-
-# Img
-*.png
-*.jpg
-*.gif
-
-
-*.mp3

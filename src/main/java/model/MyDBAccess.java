@@ -5,13 +5,10 @@ import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.Statement;
 
-import jakarta.servlet.annotation.WebServlet;
-
 /*
  * Servlet implementation class MyDBAccess
  */
 
-@WebServlet("/MyDBAccess")
 public class MyDBAccess {
 
 	private String driver;
@@ -32,12 +29,12 @@ public class MyDBAccess {
 	// 引数なしのコンストラクタ 既定値を使用する
 	public MyDBAccess() {
 		driver = "org.postgresql.Driver";
-		url = "jdbc:postgresql:familymart";
+		url = "jdbc:postgresql://localhost:5432/familymart";
 		user = "postgres";
-		password = "postgres";
+		password = "12345";
 	}
 
-	//データベースへの接続を行う
+	// データベースへの接続を行う
 	public synchronized void open() throws Exception {
 		Class.forName(driver);
 		connection = DriverManager.getConnection(url, user, password);
@@ -46,10 +43,8 @@ public class MyDBAccess {
 
 	// SQL 文を実行した結果の ResultSet を返す
 	public ResultSet getResultSet(String sql) throws Exception {
-		if ( statement.execute(sql) ) {
-			return statement.getResultSet();
-		}
-		return null;
+		this.resultset = statement.executeQuery(sql);
+		return this.resultset;
 	}
 
 	// SQL 文の実行
@@ -59,8 +54,11 @@ public class MyDBAccess {
 
 	// データベースへのコネクションのクローズ
 	public synchronized void close() throws Exception {
-		if ( resultset != null ) resultset.close();
-		if ( statement != null ) statement.close();
-		if ( connection != null ) connection.close();
+		if (resultset != null)
+			resultset.close();
+		if (statement != null)
+			statement.close();
+		if (connection != null)
+			connection.close();
 	}
 }

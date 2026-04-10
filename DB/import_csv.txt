@@ -1,0 +1,6 @@
+\copy ユーザ情報 from 'C:\Users\WISS1_0165\Downloads\DB\ユーザ情報_utf8.csv' with encoding 'utf-8' csv
+\copy 出店計画 from 'C:\Users\WISS1_0165\Downloads\DB\出店計画_utf8.csv' with encoding 'utf-8' csv
+\copy 商品データ from 'C:\Users\WISS1_0165\Downloads\DB\商品データ.csv' with encoding 'utf-8' csv
+\copy 売上データ from 'C:\Users\WISS1_0165\Downloads\DB\売上データ_utf8.csv' with encoding 'utf-8' csv
+\copy 年俸 from 'C:\Users\WISS1_0165\Downloads\DB\年俸.csv' with encoding 'utf-8' csv
+\copy 経費 from 'C:\Users\WISS1_0165\Downloads\DB\経費_utf8.csv' with encoding 'utf-8' csv
