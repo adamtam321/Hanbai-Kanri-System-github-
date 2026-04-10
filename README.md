@@ -52,7 +52,7 @@ chmod +x start_project.sh
 
 ---
 
-## 📂 プロジェクト構造 (Project Structure)
+## プロジェクト構造 (Project Structure)
 
 ```text
 .
