@@ -48,7 +48,18 @@ chmod +x start_project.sh
 
 ### 3. アクセス
 ブラウザで以下のURLにアクセスしてください：
-🔗 **`http://localhost:8080/FamilyMart/`**
+ **`http://localhost:8080/FamilyMart/`**
+
+---
+
+## テスト用アカウント (Test Account)
+
+動作確認のため、以下のテスト用アカウントをご利用いただけます。
+
+- **ユーザーID:** admin  
+- **パスワード:** admin  
+
+※ 本アカウントは開発・検証用です。
 
 ---
 
